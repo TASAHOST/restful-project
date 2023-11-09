@@ -8,10 +8,16 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://hartza-13:hartza-13@cluster0.ps8tt3c.mongodb.net/')
+mongoose.connect('mongodb+srv://hartza-13:hartza-13@cluster0.ps8tt3c.mongodb.net/',{
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        dbName: '*' // กำหนดชื่อฐานข้อมูลที่คุณต้องการใช้งาน
+        
+
+})
         .then(() => console.log("con succ"))
         .catch((err) => console.log(err))
-
+        
 
 
 
