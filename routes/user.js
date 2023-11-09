@@ -1,5 +1,7 @@
-// const express = require('express');
-// const router = express.Router();
-// const Restaurantscontroller = require('../controller/user.controller');
+const express = require('express');
+const router = express.Router();
+const Usercontroller = require('../controller/user.controller');
 
-// router.post("/register")
+router.post("/" , Usercontroller.register)
+
+module.exports = router;
