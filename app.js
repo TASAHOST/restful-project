@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const restaurants = require('./routes/restaurant')
 const register = require('./routes/user')
 const mongoose = require('mongoose');
 
@@ -35,7 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/restaurants', restaurants);
 app.use('/register', register);
 
 
